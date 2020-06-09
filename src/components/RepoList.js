@@ -5,6 +5,10 @@ import { RepoItem } from "./RepoItem";
 const RepoListWrapper = styled.ul`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: ${(props) => props.theme.background.base};
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
 `;
 
 export const RepoList = (props) => {
