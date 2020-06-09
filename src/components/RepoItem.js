@@ -50,9 +50,13 @@ const ItemLink = styled.a`
 `;
 
 export const RepoItem = (props) => {
-  let { repo } = props;
+  let { repo, getRepo } = props;
   return (
-    <RepoItemWrapper>
+    <RepoItemWrapper
+      onClick={() => {
+        getRepo(repo);
+      }}
+    >
       <ListItem>
         <ItemHeading>Name</ItemHeading>
         <Item>{repo.full_name}</Item>
@@ -69,7 +73,7 @@ export const RepoItem = (props) => {
       </ListItem>
       <ListItem>
         <ItemHeading>Language</ItemHeading>
-        <Item>{repo.language}</Item>
+        <Item>{repo.language || "None"}</Item>
       </ListItem>
     </RepoItemWrapper>
   );

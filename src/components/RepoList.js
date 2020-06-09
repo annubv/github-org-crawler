@@ -12,12 +12,12 @@ const RepoListWrapper = styled.ul`
 `;
 
 export const RepoList = (props) => {
-  let { repos } = props;
+  let { repos, getRepo } = props;
 
   return (
     <RepoListWrapper>
       {repos.map((repo) => (
-        <RepoItem key={repo.id} repo={repo} />
+        <RepoItem key={repo.id} repo={repo} getRepo={getRepo} />
       ))}
     </RepoListWrapper>
   );
