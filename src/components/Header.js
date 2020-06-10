@@ -27,7 +27,7 @@ export const Header = (props) => {
   return (
     <Nav>
       <NavLogo src={octocat} alt="" />
-      <NavHeader>Github Crawler</NavHeader>
+      <NavHeader>Octokit</NavHeader>
     </Nav>
   );
 };

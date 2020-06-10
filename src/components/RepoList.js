@@ -16,7 +16,7 @@ export const RepoList = (props) => {
 
   return (
     <RepoListWrapper>
-      {repos.map((repo) => (
+      {repos.map((repo, index) => (
         <RepoItem key={repo.id} repo={repo} getRepo={getRepo} />
       ))}
     </RepoListWrapper>
